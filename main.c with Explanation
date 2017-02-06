@@ -1,0 +1,48 @@
+//Program to find the Area of a Right angle Triangle//
+
+#include <stdio.h>
+#include <math.h>
+
+int main (void)
+
+
+{
+    //Identifying width as 'w', c as the Hypotenuse, and using a Float function to do so//
+    float w, height, c, area, perimeter;
+
+    //Displaying the Console text in the center//
+    int width = 80;
+    char str[] = "AlTerkait's Area & Perimeter Triangle Program!";
+    int length = sizeof(str) - 1;
+    int pad = (length >= width) ? 0 : (width - length)
+     / 2;
+    printf("%*.*s%s\n", pad, pad, " ", str);
+    printf("\n");
+
+    //Text displayed on Console Window//
+    printf("Hello and welcome to this program! This Program will help you with\n");
+    printf("finding the area and perimeter of a Right-angled Triangle, given it's \n");
+    printf("height and width.\n");
+
+    //Gives user chance to enter the Triangle's height, and then it is scanned as a Height// 
+    printf("\nPlease Enter the height of the triangle:\n");
+    scanf("%f", &height);
+
+    //Gives user chance to enter the Triangle's width, and then is scanned as w//
+    printf ("Please Enter the width of the triangle:");
+    scanf("%f", &w);
+
+    //Define area, hyp & perimeter.//
+    area        = 0.5 * width * height;
+    c           = sqrt((w*w) + (height * height));
+    perimeter   = w + height + c;
+
+    //Displays The area and Perimeter in the Console window//
+    printf("the Area of the Triangle is: %.2f\n", area);
+    printf("\nThe Perimeter of the Triangle is: %.2f\n", perimeter);
+
+    printf("I Hope you found this helpful! :) ");
+
+
+    return 0;
+}
